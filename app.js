@@ -54,7 +54,7 @@ Complete the exercise in the space below:
 */
 
 const isCharAVowel = (character) => {
-    if (character === `a` || character === `e` || character === `i`) {
+    if (character === `a` || character === `e` || character === `i` || character ==='o' || character === 'u') {
       return true;
     } else {
       return false;
@@ -95,17 +95,26 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 Complete the exercise in the space below:
 */
 
-const greetUser = (name,timeOfDay) => {
-greeting = ``;
-if (timeOfDay = 'morning') 
-  greeting = 'Good morning, ' + name + '!';
+const greetUser = (name, timeOfDay) => {
+  let greeting = ''; 
+
+  if (timeOfDay === 'morning') {
+    greeting = 'Good morning, ' + name + '!';
+  } else if (timeOfDay === 'afternoon') {
+    greeting = 'Good afternoon, ' + name + '!';
+  } else if (timeOfDay === 'evening') {
+    greeting = 'Good evening, ' + name + '!';
+  } else {
+    greeting = 'Hello, ' + name + '!'; 
+  }
+
   return greeting;
-}
+};
 
-
-
-console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
-
+console.log('Exercise 5 Result:', greetUser("Sam", "morning")); // Good morning, Sam!
+console.log('Exercise 5 Result:', greetUser("Alex", "afternoon")); // Good afternoon, Alex!
+console.log('Exercise 5 Result:', greetUser("Taylor", "evening")); // Good evening, Taylor!
+console.log('Exercise 5 Result:', greetUser("Jordan", "night")); // Hello, Jordan!
 
 /*
 Exercise 6: maxOfThree()
